@@ -1,5 +1,15 @@
 <template>
     <footer class="footer">
+      <ul>
+        <li><a href="#">Terms and Conditions</a> </li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div>
+        <p>Follow us</p>
+        <p>facabook</p>
+        <p>twitter</p>
+      </div>
     </footer>
 </template>
 

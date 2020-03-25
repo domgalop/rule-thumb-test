@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar">
         <ul>
-            <li></li>
+            <li>Trials</li>
+            <li>How It works</li>
+            <li>Login/Sign Up</li>
         </ul>
     </nav>
 </template>

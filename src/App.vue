@@ -24,5 +24,4 @@ export default {
 
 <style lang="scss" scoped>
   @import './styles/components/App.scss';
-  @import './styles/utilities/normalize';
 </style>
