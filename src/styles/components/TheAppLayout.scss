@@ -1,16 +1,19 @@
 .app__container {
     display: grid;
     grid-area: main;
-    grid-row-gap: 20px;
+    grid-row-gap: 2%;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 9% 5% 60% 9%;
+    grid-template-rows: 9% 3% 72% 8%;
     grid-template-areas:
     ". PageInfo ."
     ". vote ."
     ". VoteRank ."
-    ". Submit .";
+    ". Submit ."
 }
 
 .vote__title {
+    margin: 0;
+    font-size: 1.8em;
     grid-area: vote;
+    align-self: center;
 }

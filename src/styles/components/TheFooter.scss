@@ -1,3 +1,51 @@
 .footer__wrapper {
+    align-items: center;
+    background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: 10px 1px;
+    display: flex;
+    flex-wrap: column wrap;
     grid-area: footer;
+    justify-content: space-between;
+    justify-self: center;
+    width: 80%;
+}
+
+.social {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+
+    &__follow {
+        text-transform: capitalize;
+    }
+
+    &__link {
+        color: $black;
+        font-size: 1.5em;
+        height: fit-content;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+.enterprise__statement {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 60%;
+
+    &__links {
+        color: $black;
+        font-size: 0.8em;
+        padding-left: 1em;
+        text-decoration: none;
+
+        &:visited {
+            color: $black;
+        }
+    }
 }

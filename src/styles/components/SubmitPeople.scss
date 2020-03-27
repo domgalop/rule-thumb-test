@@ -1,3 +1,46 @@
-.submit__wrapper {
-    grid-area: Submit;
+.submit {
+    &__wrapper {
+        background-image: url('../../assets/people.png');
+        display: grid;
+        grid-area: Submit;
+        grid-template-areas: ". text button .";
+        grid-template-columns: 2% 64% 32% 2%;
+        grid-template-rows: 100%;
+        height: 60%;
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            background-color: $white;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        align-self: center;
+        color: $black;
+        font-size: 150%;
+        grid-area: text;
+        height: fit-content;
+        margin: 0;
+    }
+
+    &__button {
+        align-self: center;
+        background-color: transparent;
+        border: 3px solid $black;
+        cursor: pointer;
+        grid-area: button;
+        height: 60%;
+        justify-self: end;
+        padding: 0;
+        width: 63%;
+    }
 }

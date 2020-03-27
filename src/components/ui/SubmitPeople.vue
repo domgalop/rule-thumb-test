@@ -1,6 +1,7 @@
 <template>
   <div class="submit__wrapper">
-      <p>submit people</p>
+      <p class="submit__text">Is there anyone else you want us to add?</p>
+      <button class="submit__button">Submit a Name</button>
   </div>
 </template>
 

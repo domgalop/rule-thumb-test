@@ -1,20 +1,23 @@
-.header__wrapper {
-    background-image:
-        linear-gradient(180deg, rgba(94,94,94,0.6390756986388305) 5%, rgba(254,254,254,0) 41%),
-        url('../../assets/images/pope.png');
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    display: grid;
-    grid-area: header;
-    grid-template-areas:
-    ". navbar ."
-    ". headerContent ."
-    "progressBar progressBar progressBar";
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 14% 76% 10%;
-    position: relative;
-    z-index: 1;
+.header{
+    &__wrapper {
+        background-image:
+            linear-gradient(180deg, rgba(94,94,94,0.6390756986388305) 5%, rgba(254,254,254,0) 41%),
+            url('../../assets/images/pope.png');
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        background-size: 104%;
+        color: $white;
+        display: grid;
+        grid-area: header;
+        grid-template-areas:
+        ". navbar ."
+        ". headerContent ."
+        "progressBar progressBar progressBar";
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 14% 76% 10%;
+        position: relative;
+        z-index: 1;
+    }
 
     &__info {
         display: grid;

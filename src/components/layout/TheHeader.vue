@@ -1,6 +1,6 @@
 <template>
     <header class="header__wrapper">
-      <div class="header__wrapper__info">
+      <div class="header__info">
         <h1 class="main__title">Rule of thumb</h1>
         <Navbar />
         <Search />

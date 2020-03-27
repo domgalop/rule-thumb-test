@@ -3,9 +3,9 @@
     <div class="hero__layout">
       <h2 class="hero__title">
        <span class="hero__title"> What's your opinion on </span>
-        <span class="hero__title--highlight">Pope Francis ?</span>
+        <span class="hero__title--highlight">Pope Francis?</span>
       </h2>
-      <p class="hero__text">
+      <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia maxime saepe magnam,
         quia veritatis hic molestias dolore doloremque delectus blanditiis
       </p>
@@ -18,7 +18,7 @@
         <i class="fas fa-thumbs-up"></i>
       </button>
       <button class="button__container--hero button__color--thumbDown">
-        <i class="fas fa-thumbs-up"></i>
+        <i class="fas fa-thumbs-down"></i>
       </button>
   </article>
 </template>
