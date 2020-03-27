@@ -1,18 +1,22 @@
 <template>
-  <main class="app__container">
-    <div class="app__container__content">
-      <PageInformation />
-      <h2>Votest</h2>
-      <Vote />
-      <SubmitPeople />
-    </div>
-  </main>
+  <div class="page__container">
+    <TheHeader />
+    <main class="app__container">
+        <PageInformation />
+        <h2 class="vote__title">Votes</h2>
+        <Vote />
+        <SubmitPeople />
+    </main>
+    <TheFooter />
+  </div >
 </template>
 
 <script>
 
 import PageInformation from '../ui/PageInformation.vue';
 import SubmitPeople from '../ui/SubmitPeople.vue';
+import TheFooter from './TheFooter.vue';
+import TheHeader from './TheHeader.vue';
 import Vote from '../ui/Vote.vue';
 
 export default {
@@ -20,6 +24,8 @@ export default {
   components: {
     PageInformation,
     SubmitPeople,
+    TheFooter,
+    TheHeader,
     Vote,
   },
 };

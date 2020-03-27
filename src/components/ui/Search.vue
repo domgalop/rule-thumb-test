@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>search image</p>
+  <div class="search__wrapper">
+    <i class="fas fa-search"></i>
   </div>
 </template>
 

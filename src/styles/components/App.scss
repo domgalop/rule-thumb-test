@@ -1,0 +1,12 @@
+.page__container {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 60% 5%;
+    height: 1620px;
+    margin: 0 auto;
+    width: 50vw;
+}

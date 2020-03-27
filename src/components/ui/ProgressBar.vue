@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h2>CLOSING IN</h2>
+  <div class="progress__bar">
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer__wrapper">
       <ul>
         <li><a href="#">Terms and Conditions</a> </li>
         <li><a href="#">Privacy policy</a></li>

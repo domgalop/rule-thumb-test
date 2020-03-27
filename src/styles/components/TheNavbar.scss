@@ -1,0 +1,8 @@
+.navbar__list {
+    align-items: center;
+    color: $white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    height: 100%;
+}

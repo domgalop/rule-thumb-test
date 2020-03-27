@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="submit__wrapper">
       <p>submit people</p>
   </div>
 </template>

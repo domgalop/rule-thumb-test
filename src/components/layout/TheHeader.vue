@@ -1,8 +1,10 @@
 <template>
-    <header class="header">
-      <h1>Rule of thumb</h1>
-      <Navbar />
-      <Search />
+    <header class="header__wrapper">
+      <div class="header__wrapper__info">
+        <h1 class="main__title">Rule of thumb</h1>
+        <Navbar />
+        <Search />
+      </div>
       <Hero />
       <ProgressBar />
     </header>

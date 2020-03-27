@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article class="vote__wrapper">
         <p>icon</p>
         <p>kanye West</p>
         <p><span>1 month ago in</span> in Entertainment</p>

@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar">
-        <ul>
-            <li>Trials</li>
-            <li>How It works</li>
-            <li>Login/Sign Up</li>
+    <nav class="navbar__wrapper">
+        <ul class="navbar__list">
+            <li><router-link to="/trials" class="router__link">Past Trials</router-link></li>
+            <li><router-link to="/how-it-works" class="router__link">How It works</router-link></li>
+            <li><router-link to="/login" class="router__link">Login/Sign Up</router-link></li>
         </ul>
     </nav>
 </template>
