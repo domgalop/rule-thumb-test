@@ -5,7 +5,7 @@
             url('../../assets/images/pope.png');
         background-position: 50% 0%;
         background-repeat: no-repeat;
-        background-size: 104%;
+        background-size: cover;
         color: $white;
         display: grid;
         grid-area: header;
@@ -13,8 +13,7 @@
         ". navbar ."
         ". headerContent ."
         "progressBar progressBar progressBar";
-        grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 14% 76% 10%;
+        grid-template-rows: 15% 78% 7%;
         position: relative;
         z-index: 1;
     }
@@ -27,8 +26,62 @@
     }
 }
 
-.main__title {
-    align-self: center;
-    color: $white;
-    margin: 0;
+.main {
+    &__title {
+        align-self: center;
+        color: $white;
+        margin: 0;
+        width: fit-content;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: $breakpointMobile) {
+    .header {
+        &__wrapper {
+            grid-template-columns: auto;
+            grid-template-areas:
+            " navbar "
+            "headerContent "
+            "progressBar";
+        }
+
+        &__info {
+            display: grid;
+            grid-area: navbar;
+            grid-template-columns: 33% 57% 10%;
+            grid-template-rows: auto;
+        }
+    }
+
+    .main {
+        &__title {
+            padding-left: 10%;
+        }
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .header {
+        &__wrapper {
+            grid-template-columns: 7% 86% 7%;
+            grid-template-areas:
+            ". navbar ."
+            ".headerContent ."
+            "progressBar progressBar progressBar";
+        }
+    }
+}
+
+@media (min-width: $breakpointDesktop) {
+    .header {
+        &__wrapper {
+            grid-template-columns: 10% 80% 10%;
+        }
+    }
+    .main {
+        &__title {
+            padding: 0;
+        }
+    }
 }

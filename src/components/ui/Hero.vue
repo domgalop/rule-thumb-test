@@ -1,11 +1,11 @@
 <template>
   <article class="hero__wrapper">
     <div class="hero__layout">
-      <h2 class="hero__title">
-       <span class="hero__title"> What's your opinion on </span>
-        <span class="hero__title--highlight">Pope Francis?</span>
-      </h2>
-      <p>
+      <span class="hero__title">
+        <p class="hero__title"> What's your opinion on </p>
+        <p class="hero__title--highlight">Pope Francis?</p>
+      </span>
+      <p class="hero__text">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia maxime saepe magnam,
         quia veritatis hic molestias dolore doloremque delectus blanditiis
       </p>

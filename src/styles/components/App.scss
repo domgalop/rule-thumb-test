@@ -7,6 +7,30 @@
     grid-template-columns: 100%;
     grid-template-rows: 31% 66% 4%;
     height: 1800px;
-    margin: 0 auto;
-    width: 50vw;
+}
+
+@media (min-width: $breakpointMobile) {
+    .page__container {
+        margin: 0;
+        width: 100vw;
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .page__container {
+        margin: 0 auto;
+        width: 80vw;
+    }
+}
+
+@media (min-width: $breakpointDesktop) {
+    .page__container {
+        width: 70vw;
+    }
+}
+
+@media (min-width: $breakpointDesktopLarge) {
+    .page__container {
+        width: 50vw;
+    }
 }

@@ -4,7 +4,7 @@
         display: grid;
         grid-area: Submit;
         grid-template-areas: ". text button .";
-        grid-template-columns: 2% 64% 32% 2%;
+        grid-template-columns: 2% 56% 40% 2%;
         grid-template-rows: 100%;
         height: 60%;
         position: relative;
@@ -41,6 +41,37 @@
         height: 60%;
         justify-self: end;
         padding: 0;
-        width: 63%;
+    }
+}
+
+@media (min-width: $breakpointMobile) {
+    .submit {
+        &__button {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .submit {
+        &__button {
+            width: 85%;
+        }
+    }
+}
+
+@media (min-width: $breakpointDesktop) {
+    .submit {
+        &__button {
+            width: 73%;
+        }
+    }
+}
+
+@media (min-width: $breakpointDesktopLarge) {
+    .submit {
+        &__button {
+            width: 63%;
+        }
     }
 }

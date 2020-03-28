@@ -17,3 +17,33 @@
     grid-area: vote;
     align-self: center;
 }
+
+@media (min-width: $breakpointMobile) {
+    .app__container {
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "PageInfo"
+        "vote "
+        "VoteRank"
+        "Submit "
+    }
+
+    .vote__title {
+        padding-left: 10%;
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .app__container {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas:
+        ". PageInfo ."
+        ". vote ."
+        ". VoteRank ."
+        ". Submit ."
+    }
+
+    .vote__title {
+        padding: 0;
+    }
+}
