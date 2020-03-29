@@ -4,7 +4,7 @@
     <main class="app__container">
         <PageInformation />
         <h2 class="vote__title">Votes</h2>
-        <Vote />
+        <VoteSection />
         <SubmitPeople />
     </main>
     <TheFooter />
@@ -17,7 +17,7 @@ import PageInformation from '../ui/PageInformation.vue';
 import SubmitPeople from '../ui/SubmitPeople.vue';
 import TheFooter from './TheFooter.vue';
 import TheHeader from './TheHeader.vue';
-import Vote from '../ui/Vote.vue';
+import VoteSection from '../ui/VoteSection.vue';
 
 export default {
   name: 'TheAppLayout',
@@ -26,7 +26,7 @@ export default {
     SubmitPeople,
     TheFooter,
     TheHeader,
-    Vote,
+    VoteSection,
   },
 };
 </script>

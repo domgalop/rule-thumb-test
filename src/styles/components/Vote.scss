@@ -1,3 +1,115 @@
-.vote__wrapper {
-    grid-area: VoteRank;
+.vote {
+    &__wrapper {
+        color: $white;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 0;
+
+        &:after {
+            background: linear-gradient(360deg, rgba(0,0,0,1) 3%, rgba(255,255,255,0) 91%);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+
+    &__person {
+        font-size: 2em;
+        margin: 0 0 2% 0;
+        text-transform: capitalize;
+
+        &__image {
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -2;
+        }
+
+        &__description {
+            font-size: 0.9em;
+            margin: 2% 0;
+        }
+    }
+
+    &__information {
+        width: 92%;
+        align-self: flex-end;
+        height: 38%;
+    }
+
+    &__outcome {
+        align-items: center;
+        background-color: $yellow;
+        display: flex;
+        height: 6%;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 51.5%;
+        width: 6%;
+    }
+
+    &__time {
+        font-size: 0.7em;
+        margin: 0 0 2%;
+
+        &--highlight {
+            font-weight: bold;
+        }
+    }
+
+    &__button {
+        color: $white;
+        border: none;
+        margin-right: 3%;
+    }
+
+    &--now {
+        background-color: transparent;
+        border: 1px solid $white;
+        bottom: 1%;
+        font-size: 0.8em;
+        padding: 2% 3%;
+        position: relative;
+    }
+
+    &--up {
+        background-color: $aquamarine;
+        padding: 1.5%;
+    }
+
+    &--down {
+        background-color: $yellow;
+        padding: 1.5%;
+    }
+}
+
+@media (min-width: $breakpointMobile) {
+    .vote {
+        &__wrapper {
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width: $breakpointTablet) {
+    .vote {
+        &__wrapper {
+            height: 100%;
+        }
+
+        &__outcome {
+            font-size: 0.8em;
+        }
+    }
 }

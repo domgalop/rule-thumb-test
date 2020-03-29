@@ -1,3 +1,38 @@
-.progress__bar {
-    grid-area: progressBar
+.progress {
+    &__bar {
+        grid-area: progressBar;
+        display: flex;
+
+        &--closing {
+            align-items: center;
+            background-color: rgba($black, 0.15);
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 1%;
+            position: relative;
+            width: 32%;
+
+            &:after {
+                background-color: rgba($black, 0.15);
+                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                content: "";
+                height: 20%;
+                left: 100%;
+                position: absolute;
+                top: 39%;
+                width: 2%;
+            }
+        }
+
+        &--days {
+            align-items: center;
+            background-color: rgba($grey, 0.6);
+            color: rgba($black, 0.5);
+            display: flex;
+            font-size: 1.6em;
+            justify-content: flex-start;
+            padding-left: 2%;
+            width: 68%;
+        }
+    }
 }

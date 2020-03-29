@@ -88,11 +88,11 @@
 
     &__color {
         &--thumbUp {
-            background-color: rgba($aquamarine, $alpha: 0.5);
+            background-color: rgba($aquamarine, 0.8);
             font-size: 1.5em;
         }
         &--thumbDown {
-            background-color: rgba($yellow, $alpha: 0.5);
+            background-color: rgba($yellow, 0.7);
             font-size: 1.5em;
         }
     }
@@ -102,7 +102,7 @@
     .hero {
         &__wrapper {
             align-self: center;
-            height: 80%;
+            height: 90%;
             justify-self: center;
             width: 60%;
         }
@@ -112,7 +112,6 @@
 @media (min-width: $breakpointTablet) {
     .hero {
         &__wrapper {
-            align-self: center;
             height: 75%;
             justify-self: start;
             width: 60%;

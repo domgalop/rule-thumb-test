@@ -1,6 +1,6 @@
 .submit {
     &__wrapper {
-        background-image: url('../../assets/people.png');
+        background-image: url('../../assets//images/people.png');
         display: grid;
         grid-area: Submit;
         grid-template-areas: ". text button .";
@@ -26,7 +26,6 @@
     &__text {
         align-self: center;
         color: $black;
-        font-size: 150%;
         grid-area: text;
         height: fit-content;
         margin: 0;
@@ -47,6 +46,7 @@
 @media (min-width: $breakpointMobile) {
     .submit {
         &__button {
+            font-size: 0.8em;
             width: 80%;
         }
     }
@@ -55,6 +55,7 @@
 @media (min-width: $breakpointTablet) {
     .submit {
         &__button {
+            font-size: 0.9em;
             width: 85%;
         }
     }
@@ -63,7 +64,12 @@
 @media (min-width: $breakpointDesktop) {
     .submit {
         &__button {
+            font-size: 1em;
             width: 73%;
+        }
+
+        &__text {
+            font-size: 1.5em;
         }
     }
 }
