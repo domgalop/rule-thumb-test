@@ -1,15 +1,24 @@
 <template>
     <section class="vote__section">
         <Vote
-          v-for="(image ,index) in images"
+          v-for="(vote ,index) in votes"
           :key="index"
-          :imageUrl=image
+          :optionAlreadyVoted=vote.optionAlreadyVoted
+          :optionDescription=vote.optionDescription
+          :optionImageUrl=vote.optionImageUrl
+          :optionName=vote.optionName
+          :optionNegativeRanking=vote.optionNegativeRanking
+          :optionPositiveRanking=vote.optionPositiveRanking
+          :optionSection=vote.optionSection
+          :optionTime=vote.optionTime
+          :optionTotalVotes=vote.optionTotalVotes
         />
     </section>
 </template>
 
 <script>
 
+import { mapState, mapActions } from 'vuex';
 import Vote from './Vote.vue';
 
 export default {
@@ -17,15 +26,14 @@ export default {
   components: {
     Vote,
   },
-  data() {
-    return {
-      images: [
-        'kanye.png',
-        'markzuckerberg.png',
-        'cristina.png',
-        'malala.png',
-      ],
-    };
+  computed: mapState({
+    ...mapState('votesModule', ['votes']),
+  }),
+  methods: {
+    ...mapActions('votesModule', ['fetchVotes']),
+  },
+  async mounted() {
+    this.fetchVotes();
   },
 };
 </script>

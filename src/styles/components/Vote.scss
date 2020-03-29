@@ -17,6 +17,38 @@
             width: 100%;
             z-index: -1;
         }
+
+        &__hovering {
+            &--up:after {
+                box-shadow: inset 0px 0px 0px 4px rgba($aquamarine, 0.5);
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            &--down:after {
+                box-shadow: inset 0px 0px 0px 4px rgba($yellow, 0.5);
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            &--now:after {
+                box-shadow: inset 0px 0px 0px 4px rgba($black, 0.4);
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
     }
 
     &__person {
@@ -69,6 +101,7 @@
     }
 
     &__button {
+        cursor: pointer;
         color: $white;
         border: none;
         margin-right: 3%;

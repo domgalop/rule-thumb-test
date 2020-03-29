@@ -1,0 +1,49 @@
+{
+    "appName": "Rule Of thumb",
+    "voteOptions": [
+        {
+            "optionAlreadyVoted": false,
+            "optionDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+            "optionImageUrl": "/kanye",
+            "optionName": "kanye west",
+            "optionNegativeRanking": 36,
+            "optionPositiveRanking": 64,
+            "optionSection": "Entertainment",
+            "optionTime": "1 month ago",
+            "optionTotalVotes": 100
+        },
+        {
+            "optionAlreadyVoted": true,
+            "optionDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+            "optionImageUrl": "/mark",
+            "optionName": "mark zuckerberg",
+            "optionNegativeRanking": 64,
+            "optionPositiveRanking": 36,
+            "optionSection": "Business",
+            "optionTime": "1 month ago",
+            "optionTotalVotes": 100
+        },
+        {
+            "optionAlreadyVoted": false,
+            "optionDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+            "optionImageUrl": "/cristina",
+            "optionName": "cristina fernández de kirchner",
+            "optionNegativeRanking": 64,
+            "optionPositiveRanking": 36,
+            "optionSection": "politics",
+            "optionTime": "1 month ago",
+            "optionTotalVotes": 100
+        },
+        {
+            "optionAlreadyVoted": false,
+            "optionDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+            "optionImageUrl": "/cristina",
+            "optionName": "malala yousafzai",
+            "optionNegativeRanking": 36,
+            "optionPositiveRanking": 64,
+            "optionSection": "politics",
+            "optionTime": "1 month ago",
+            "optionTotalVotes": 100
+        }
+    ]
+}
