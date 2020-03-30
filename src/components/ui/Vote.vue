@@ -61,7 +61,6 @@
         </div>
         <VoteProgressBar
           :currentValue=progressPercentage
-          :maxVotes=optionTotalVotes
         />
     </article>
 </template>
