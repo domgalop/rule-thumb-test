@@ -1,6 +1,6 @@
 .submit {
     &__wrapper {
-        background-image: url('../../assets//images/people.png');
+        background-image: url('../../assets/images/people.png');
         display: grid;
         grid-area: Submit;
         grid-template-areas: ". text button .";
@@ -10,7 +10,7 @@
         position: relative;
         z-index: 0;
 
-        &::before {
+        &:before {
             background-color: $white;
             content: "";
             height: 100%;

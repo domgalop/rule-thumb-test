@@ -3,16 +3,16 @@
     <label  class="vote__progress__bar__name" for="file">Vote progress:</label>
     <span class="vote__outcome--up">
       <i class="fas fa-thumbs-up"></i>
-      36%
+      {{ currentValue }}%
     </span>
     <span class="vote__outcome--down">
       <i class="fas fa-thumbs-down"></i>
-      64%
+      {{ `${(100 - currentValue)}%` }}
     </span>
     <progress
       class="vote__progress__bar__porcentage"
       max="100"
-      value="50"
+      :value="`${this.currentValue}`"
     >
     </progress>
   </div>
@@ -21,6 +21,13 @@
 <script>
 export default {
   name: 'VoteProgressBar',
+  props: {
+    currentValue: {
+      default: '50',
+      required: true,
+      type: String,
+    },
+  },
 };
 </script>
 

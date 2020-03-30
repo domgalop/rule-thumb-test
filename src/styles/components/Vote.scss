@@ -52,7 +52,10 @@
     }
 
     &__person {
+        align-items: flex-end;
+        display: flex;
         font-size: 2em;
+        height: 38%;
         margin: 0 0 2% 0;
         text-transform: capitalize;
 
@@ -73,9 +76,9 @@
     }
 
     &__information {
-        width: 92%;
         align-self: flex-end;
-        height: 38%;
+        height: 47%;
+        width: 92%;
     }
 
     &__outcome {
@@ -89,6 +92,14 @@
         text-align: center;
         top: 51.5%;
         width: 6%;
+
+        &--positive {
+            background-color: $aquamarine;
+        }
+
+        &--negative {
+            background-color: $yellow;
+        }
     }
 
     &__time {

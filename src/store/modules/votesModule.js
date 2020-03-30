@@ -12,12 +12,10 @@ const mutations = {
   SET_UPDATE_VOTE(state, voteSelection) {
     state.votes.forEach((e) => {
       if (e.id === voteSelection.id) {
-        e.optionTotalVotes += 1;
-
         if (voteSelection.currentVote === 'yes') {
-          e.optionPositiveRanking += 1;
+          e.optionVotesPositive += 1;
         } else {
-          e.optionPositiveRanking += 1;
+          e.optionVotesNegative += 1;
         }
       }
     });

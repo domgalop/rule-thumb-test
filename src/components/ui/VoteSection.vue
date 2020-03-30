@@ -4,14 +4,14 @@
           v-for="(vote ,index) in votes"
           :key="index"
           :id=vote.id
+          :optionAlreadyVoted=vote.optionAlreadyVoted
           :optionDescription=vote.optionDescription
           :optionImageUrl=vote.optionImageUrl
           :optionName=vote.optionName
-          :optionNegativeRanking=vote.optionNegativeRanking
-          :optionPositiveRanking=vote.optionPositiveRanking
+          :optionVotesPositive=vote.optionVotesPositive
+          :optionVotesNegative=vote.optionVotesNegative
           :optionSection=vote.optionSection
           :optionTime=vote.optionTime
-          :optionTotalVotes=vote.optionTotalVotes
         />
     </section>
 </template>

@@ -2,12 +2,19 @@
     <article
         :class="'vote__wrapper '+ [ hovering ? hoveringClass : '']">
         <div class="vote__information">
-          <span class=" vote__outcome">
-             <i class="fas fa-thumbs-up"></i>
+          <span
+            :class="'vote__outcome '+
+            [ this.optionVotesPositive > this.optionVotesNegative ?
+              'vote__outcome--positive' : 'vote__outcome--negative']"
+          >
+            <i :class="'fas fa-thumbs-'+
+            [ this.optionVotesPositive > this.optionVotesNegative ? 'up' : 'down']"
+            >
+            </i>
           </span>
           <img
             :src="require(`../../assets/images/${this.optionImageUrl}`)"
-            alt="Kanye West"
+            :alt="`${optionName}`"
             class="vote__person__image"
           >
           <p class="vote__person">{{ optionName }}</p>
@@ -20,7 +27,7 @@
               @click='saveCurrentVote("yes")'
               @mouseout=isNotHoveringButton
               @mouseover='isHoveringButton("up")'
-              :class="'vote__button vote--up '+ [ hovering ? 'vote__button--border' : '']"
+              :class="'vote__button vote--up '+ [ votePosivite ? 'vote__button--border' : '']"
             >
               <i class="fas fa-thumbs-up"></i>
             </button>
@@ -28,7 +35,7 @@
               @click='saveCurrentVote("no")'
               @mouseout=isNotHoveringButton
               @mouseover='isHoveringButton("down")'
-              :class="'vote__button vote--down '+ [ hovering ? 'vote__button--border' : '']"
+              :class="'vote__button vote--down '+ [ votesNegative ? 'vote__button--border' : '']"
             >
               <i class="fas fa-thumbs-down"></i>
             </button>
@@ -52,7 +59,10 @@
             </button>
           </div>
         </div>
-        <VoteProgressBar />
+        <VoteProgressBar
+          :currentValue=progressPercentage
+          :maxVotes=optionTotalVotes
+        />
     </article>
 </template>
 
@@ -72,12 +82,26 @@ export default {
       currentVote: '',
       hovering: false,
       hoveringClass: 'vote__wrapper__hovering',
+      votePosivite: false,
+      votesNegative: false,
     };
+  },
+  computed: {
+    progressPercentage() {
+      return ((
+        this.optionVotesPositive * 100) / (this.optionVotesPositive + this.optionVotesNegative)
+      ).toFixed(0);
+    },
   },
   props: {
     id: {
       required: true,
       type: Number,
+    },
+    optionAlreadyVoted: {
+      default: false,
+      required: true,
+      type: Boolean,
     },
     optionDescription: {
       required: true,
@@ -92,11 +116,11 @@ export default {
       required: true,
       type: String,
     },
-    optionNegativeRanking: {
+    optionVotesNegative: {
       required: true,
       type: Number,
     },
-    optionPositiveRanking: {
+    optionVotesPositive: {
       required: true,
       type: Number,
     },
@@ -108,10 +132,6 @@ export default {
       required: true,
       type: String,
     },
-    optionTotalVotes: {
-      required: true,
-      type: Number,
-    },
   },
   methods: {
     ...mapMutations('votesModule', ['SET_UPDATE_VOTE']),
@@ -122,8 +142,16 @@ export default {
     isNotHoveringButton() {
       this.hovering = false;
     },
-    saveCurrentVote(Voteselected) {
-      this.currentVote = Voteselected;
+    saveCurrentVote(voteSelected) {
+      this.currentVote = voteSelected;
+
+      if (voteSelected === 'yes') {
+        this.votePosivite = true;
+        this.votesNegative = false;
+      } else {
+        this.votePosivite = false;
+        this.votesNegative = true;
+      }
     },
     voteNofication() {
       if (this.currentVote === '') {
@@ -144,6 +172,7 @@ export default {
         id: this.id,
         currentVote: this.currentVote,
       });
+
       this.$notify({
         group: 'vote',
         title: '<h3>Thank you for voting!</h3>',
@@ -152,8 +181,14 @@ export default {
         duration: 3000,
         speed: 200,
       });
-      this.currentVote = '';
+
+      this.resetVoteStatus();
+    },
+    resetVoteStatus() {
       this.AlreadyVote = true;
+      this.currentVote = '';
+      this.votePosivite = false;
+      this.votesNegative = false;
     },
   },
 };
