@@ -4,7 +4,9 @@ import TheNavbar from '../../../src/components/layout/TheNavbar.vue';
 let wrapper;
 
 beforeEach(() => {
-  wrapper = shallowMount(TheNavbar);
+  wrapper = shallowMount(TheNavbar, {
+    stubs: ['router-link', 'router-view'],
+  });
 });
 
 afterEach(() => {

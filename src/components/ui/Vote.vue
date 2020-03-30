@@ -97,11 +97,6 @@ export default {
       required: true,
       type: Number,
     },
-    optionAlreadyVoted: {
-      default: false,
-      required: true,
-      type: Boolean,
-    },
     optionDescription: {
       required: true,
       type: String,

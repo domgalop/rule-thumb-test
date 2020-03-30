@@ -5,7 +5,7 @@ let wrapper;
 
 beforeEach(() => {
   wrapper = shallowMount(App, {
-    stubs: ['router-link', 'router-view'],
+    stubs: ['router-link', 'router-view', 'notifications'],
   });
 });
 

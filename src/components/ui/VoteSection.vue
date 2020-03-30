@@ -4,7 +4,6 @@
           v-for="(vote ,index) in votes"
           :key="index"
           :id=vote.id
-          :optionAlreadyVoted=vote.optionAlreadyVoted
           :optionDescription=vote.optionDescription
           :optionImageUrl=vote.optionImageUrl
           :optionName=vote.optionName
