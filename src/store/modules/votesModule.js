@@ -5,9 +5,22 @@ const state = () => ({
 });
 
 const mutations = {
-  // eslint-disable-next-line no-shadow
   SET_VOTES(state, data) {
     state.votes = data;
+  },
+
+  SET_UPDATE_VOTE(state, voteSelection) {
+    state.votes.forEach((e) => {
+      if (e.id === voteSelection.id) {
+        e.optionTotalVotes += 1;
+
+        if (voteSelection.currentVote === 'yes') {
+          e.optionPositiveRanking += 1;
+        } else {
+          e.optionPositiveRanking += 1;
+        }
+      }
+    });
   },
 };
 

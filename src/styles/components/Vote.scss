@@ -105,6 +105,10 @@
         color: $white;
         border: none;
         margin-right: 3%;
+
+        &--border {
+            box-shadow: inset 0px 0px 0px 2px $white;
+        }
     }
 
     &--now {
@@ -114,16 +118,60 @@
         font-size: 0.8em;
         padding: 2% 3%;
         position: relative;
+        z-index: 1;
+
+        &:hover {
+            &:after {
+                box-shadow: inset 0px 0px 0px 2px $white;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+        }
     }
 
     &--up {
         background-color: $aquamarine;
         padding: 1.5%;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            &:after {
+                box-shadow: inset 0px 0px 0px 2px $white;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+        }
     }
 
     &--down {
         background-color: $yellow;
         padding: 1.5%;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            &:after {
+                box-shadow: inset 0px 0px 0px 2px $white;
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+        }
     }
 }
 
